@@ -1,8 +1,6 @@
 package ec.edu.utpl.aa.manageoer.domain.valueObject;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @Getter

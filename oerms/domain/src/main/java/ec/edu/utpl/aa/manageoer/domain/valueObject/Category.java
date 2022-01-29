@@ -1,6 +1,6 @@
 package ec.edu.utpl.aa.manageoer.domain.valueObject;
-import lombok.*;
 
+import lombok.*;
 
 @AllArgsConstructor
 @Getter
