@@ -2,8 +2,7 @@ package ec.edu.utpl.aa.application.usecases;
 
 import ec.edu.utpl.aa.manageoer.domain.entity.Oer;
 import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
-
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 public interface PersonalOerManagementUseCase {
