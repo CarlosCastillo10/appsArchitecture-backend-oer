@@ -1,4 +1,4 @@
-package ec.edu.utpl.aa.manageoer.domain.valueObject;
+package ec.edu.utpl.aa.manageoer.domain.valueobjects;
 
 public enum Extension {
     MP3, WAV, // Audio
