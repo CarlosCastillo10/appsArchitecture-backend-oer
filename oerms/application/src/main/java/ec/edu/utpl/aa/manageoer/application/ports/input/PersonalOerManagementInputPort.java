@@ -1,7 +1,7 @@
-package ec.edu.utpl.aa.application.ports.input;
+package ec.edu.utpl.aa.manageoer.application.ports.input;
 
-import ec.edu.utpl.aa.application.ports.output.PersonalOerManagementOutputPort;
-import ec.edu.utpl.aa.application.usecases.PersonalOerManagementUseCase;
+import ec.edu.utpl.aa.manageoer.application.ports.output.PersonalOerManagementOutputPort;
+import ec.edu.utpl.aa.manageoer.application.usecases.PersonalOerManagementUseCase;
 import ec.edu.utpl.aa.manageoer.domain.entity.Oer;
 import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
 

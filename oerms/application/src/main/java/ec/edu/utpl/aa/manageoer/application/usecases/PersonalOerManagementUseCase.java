@@ -1,4 +1,4 @@
-package ec.edu.utpl.aa.application.usecases;
+package ec.edu.utpl.aa.manageoer.application.usecases;
 
 import ec.edu.utpl.aa.manageoer.domain.entity.Oer;
 import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
