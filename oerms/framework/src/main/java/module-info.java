@@ -7,6 +7,8 @@ module framework {
     requires io.helidon.webserver;
     requires com.google.api.apicommon;
     requires com.google.auth.oauth2;
+    requires com.fasterxml.jackson.databind;
+    requires com.google.gson;
     requires google.cloud.firestore;
     requires firebase.admin;
     requires java.sql;

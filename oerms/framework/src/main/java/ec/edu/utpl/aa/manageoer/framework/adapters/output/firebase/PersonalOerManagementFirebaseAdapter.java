@@ -18,7 +18,6 @@ import lombok.SneakyThrows;
 import javax.enterprise.context.ApplicationScoped;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Date;
 import java.util.List;
 
@@ -69,14 +68,15 @@ public class PersonalOerManagementFirebaseAdapter implements PersonalOerManageme
     }
 
     private void setupFirebaseDatabase() throws IOException {
-        InputStream serviceAccount = new FileInputStream("serviceAccountKey.json");
+        FileInputStream serviceAccount = new FileInputStream("./serviceAccountKey.json");
+        System.out.println(serviceAccount);
         GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
 
         // Builder creational pattern
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(credentials)
                 .build();
-        FirebaseApp.initializeApp(options);
-        db = FirestoreClient.getFirestore();
+        FirebaseApp firebaseApp = FirebaseApp.initializeApp(options);
+        db = FirestoreClient.getFirestore(firebaseApp);
     }
 }
