@@ -13,4 +13,7 @@ module framework {
     requires firebase.admin;
     requires java.sql;
     requires static lombok;
+    requires org.mongodb.driver.sync.client;
+    requires org.mongodb.driver.core;
+    requires org.mongodb.bson;
 }
