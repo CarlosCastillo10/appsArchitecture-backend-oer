@@ -21,9 +21,10 @@ import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
 
-@ApplicationScoped
-public class PersonalOerManagementFirebaseAdapter implements PersonalOerManagementOutputPort {
 
+public class PersonalOerManagementFirebaseAdapter /*implements PersonalOerManagementOutputPort*/ {
+
+    /*
     private static Firestore db;
 
     private PersonalOerManagementFirebaseAdapter() throws IOException { setupFirebaseDatabase(); }
@@ -79,4 +80,6 @@ public class PersonalOerManagementFirebaseAdapter implements PersonalOerManageme
         FirebaseApp firebaseApp = FirebaseApp.initializeApp(options);
         db = FirestoreClient.getFirestore(firebaseApp);
     }
+
+     */
 }

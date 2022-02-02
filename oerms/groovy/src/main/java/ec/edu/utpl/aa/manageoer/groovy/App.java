@@ -33,7 +33,7 @@ public final class App {
         Single<WebServer> webserver = server.start();
 
         webserver.thenAccept(ws -> {
-                    System.out.println("WEB server is up! http://localhost:" + ws.port() + "/");
+                    System.out.println("WEB server is up! http://127.0.0.1:" + ws.port() + "/");
                     ws.whenShutdown().thenRun(() -> System.out.println("WEB server is DOWN. Good bye!"));
                 })
                 .exceptionallyAccept(t -> {
