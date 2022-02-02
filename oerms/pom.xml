@@ -8,6 +8,7 @@
         <module>domain</module>
         <module>application</module>
         <module>framework</module>
+        <module>groovy</module>
     </modules>
     <parent>
         <groupId>io.helidon.applications</groupId>
