@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 public class Oer {
-    private int id;
+    private String id;
     private String title;
     private String description;
     private Date creation_date;

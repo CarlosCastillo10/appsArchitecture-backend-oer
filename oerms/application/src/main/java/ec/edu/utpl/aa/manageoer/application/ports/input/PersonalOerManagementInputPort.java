@@ -26,10 +26,12 @@ public class PersonalOerManagementInputPort implements PersonalOerManagementUseC
     }
 
     @Override
-    public Oer retrieveOer(int id){ return personalOerManagementOutputPort.retrieveOer(id); }
+    public List<Oer> retrieveOers(String collaboratorEmail) {
+        return personalOerManagementOutputPort.retrieveOers(collaboratorEmail);
+    }
 
     @Override
-    public Oer updateOer(int id, String title, String description, Date creation_date, Date update_date,
+    public Oer updateOer(String id, String title, String description, Date creation_date, Date update_date,
                          List<Author> authors, Category category, Collaborator collaborator, List<File> files,
                          List<Keyword> keywords, License license, Platform platform, State state){
 
@@ -38,6 +40,6 @@ public class PersonalOerManagementInputPort implements PersonalOerManagementUseC
     }
 
     @Override
-    public void deleteOer(int id){ personalOerManagementOutputPort.deleteOer(id); }
+    public void deleteOer(String id){ personalOerManagementOutputPort.deleteOer(id); }
 
 }
