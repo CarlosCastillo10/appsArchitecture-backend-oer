@@ -27,7 +27,7 @@ public class PersonalOerManagementInputPort implements PersonalOerManagementUseC
     }
 
     @Override
-    public List<Oer> retrieveOers(String collaboratorEmail) throws ExecutionException, InterruptedException {
+    public List<Oer> retrieveOers(String collaboratorEmail) {
         return personalOerManagementOutputPort.retrieveOers(collaboratorEmail);
     }
 

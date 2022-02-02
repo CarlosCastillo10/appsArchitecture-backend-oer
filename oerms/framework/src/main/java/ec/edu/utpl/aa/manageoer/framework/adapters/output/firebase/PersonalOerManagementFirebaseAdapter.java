@@ -1,9 +1,11 @@
 package ec.edu.utpl.aa.manageoer.framework.adapters.output.firebase;
 
+import com.google.api.core.ApiFuture;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
+import com.google.cloud.firestore.QuerySnapshot;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.cloud.FirestoreClient;
@@ -11,6 +13,7 @@ import ec.edu.utpl.aa.manageoer.application.ports.output.PersonalOerManagementOu
 import ec.edu.utpl.aa.manageoer.domain.entity.Oer;
 import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
 import ec.edu.utpl.aa.manageoer.framework.adapters.output.firebase.mappers.OerFirebaseMapper;
+import lombok.SneakyThrows;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.io.FileInputStream;
@@ -39,10 +42,13 @@ public class PersonalOerManagementFirebaseAdapter implements PersonalOerManageme
         return oer;
     }
 
+    @SneakyThrows
     @Override
-    public List<Oer> retrieveOers(String collaboratorEmail) throws ExecutionException, InterruptedException {
-        List<QueryDocumentSnapshot> oerDocuments = db.collection("oers")
-                .whereEqualTo("collaborator.email", collaboratorEmail).get().get().getDocuments();
+    public List<Oer> retrieveOers(String collaboratorEmail) {
+        ApiFuture<QuerySnapshot> oerCollections = db.collection("oers")
+                .whereEqualTo("collaborator.email", collaboratorEmail).get();
+        List<QueryDocumentSnapshot> oerDocuments = oerCollections.get().getDocuments();
+
         return OerFirebaseMapper.oerListDocumentsToDomainList(oerDocuments);
     }
 
