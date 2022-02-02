@@ -1,4 +1,4 @@
-package output.mongodb.mappers;
+package ec.edu.utpl.aa.manageoer.framework.adapters.output.mongodb.mappers;
 
 import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;

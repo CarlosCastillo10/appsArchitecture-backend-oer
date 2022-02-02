@@ -1,4 +1,4 @@
-package output.mongodb;
+package ec.edu.utpl.aa.manageoer.framework.adapters.output.mongodb;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
@@ -8,11 +8,13 @@ import ec.edu.utpl.aa.manageoer.application.ports.output.PersonalOerManagementOu
 import ec.edu.utpl.aa.manageoer.domain.entity.Oer;
 import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
 import org.bson.Document;
-import output.mongodb.mappers.PersonalOerMongoDBMapper;
+import ec.edu.utpl.aa.manageoer.framework.adapters.output.mongodb.mappers.PersonalOerMongoDBMapper;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.sql.Date;
 import java.util.List;
 
+@ApplicationScoped
 public class PersonalOerManagementMongoDBAdapter implements PersonalOerManagementOutputPort {
     private static MongoDatabase db;
 
@@ -37,6 +39,7 @@ public class PersonalOerManagementMongoDBAdapter implements PersonalOerManagemen
         FindIterable<Document> documentsOer = oerCollection.find(
                 Filters.eq("collaborator.email", collaboratorEmail)
         );
+        System.out.println(documentsOer);
         return PersonalOerMongoDBMapper.oerListDocumentstoDomainList(documentsOer);
     }
 
