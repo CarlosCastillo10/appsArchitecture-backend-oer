@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Date;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 @ApplicationScoped
 public class PersonalOerManagementFirebaseAdapter implements PersonalOerManagementOutputPort {

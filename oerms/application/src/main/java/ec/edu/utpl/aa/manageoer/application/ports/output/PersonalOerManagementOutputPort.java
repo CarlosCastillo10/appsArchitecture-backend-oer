@@ -5,7 +5,6 @@ import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
 
 import java.sql.Date;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public interface PersonalOerManagementOutputPort {
     Oer createOer(String title, String description, Date creation_date, Date update_date,

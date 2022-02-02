@@ -4,7 +4,6 @@ import ec.edu.utpl.aa.manageoer.domain.entity.Oer;
 import ec.edu.utpl.aa.manageoer.domain.valueobjects.*;
 import java.sql.Date;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public interface PersonalOerManagementUseCase {
     Oer createOer(String title, String description, Date creation_date, Date update_date, List<Author> authors,
