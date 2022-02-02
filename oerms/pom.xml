@@ -19,10 +19,10 @@
     <groupId>ec.edu.utpl.aa</groupId>
     <artifactId>manage-oer</artifactId>
     <version>0.1</version>
-    <name>oerms</name>
+    <name>manageoer</name>
 
     <properties>
-        <mainClass>ec.edu.utpl.aa.oerms.Main</mainClass>
+        <mainClass>ec.edu.utpl.aa.manageoer.groovy.App</mainClass>
         <lombok.version>1.18.22</lombok.version>
     </properties>
 
@@ -73,7 +73,8 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <executions>
                     <execution>
                         <id>copy-libs</id>

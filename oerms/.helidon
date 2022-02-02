@@ -11,5 +11,5 @@ project.directory=/home/carloscastillo/Escritorio/9no-ciclo/ARQUITECTURA-APLICAC
 schema.version=1.1.0
 project.resourcedirs=/home/carloscastillo/Escritorio/9no-ciclo/ARQUITECTURA-APLICACIONES/Proyecto/github/appsArchitecture-backend-oer/oerms/src/main/resources\:\:
 helidon.version=2.4.1
-project.mainclass=ec.edu.utpl.aa.oerms.Main
+project.mainclass=ec.edu.utpl.aa.manageoer.groovy.App
 project.source.includes=
