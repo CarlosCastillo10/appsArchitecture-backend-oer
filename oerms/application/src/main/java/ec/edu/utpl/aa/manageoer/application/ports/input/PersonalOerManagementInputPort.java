@@ -25,4 +25,9 @@ public class PersonalOerManagementInputPort implements PersonalOerManagementUseC
                 category, collaborator, files, keywords, license, platform, state);
     }
 
+    @Override
+    public Oer retrieveOer(int id){ return personalOerManagementOutputPort.retrieveOer(id); }
+
+
+
 }
