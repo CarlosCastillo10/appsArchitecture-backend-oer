@@ -25,19 +25,4 @@ public class PersonalOerManagementInputPort implements PersonalOerManagementUseC
                 category, collaborator, files, keywords, license, platform, state);
     }
 
-    @Override
-    public Oer retrieveOer(int id){ return personalOerManagementOutputPort.retrieveOer(id); }
-
-    @Override
-    public Oer updateOer(int id, String title, String description, Date creation_date, Date update_date,
-                         List<Author> authors, Category category, Collaborator collaborator, List<File> files,
-                         List<Keyword> keywords, License license, Platform platform, State state){
-
-        return personalOerManagementOutputPort.updateOer(id, title, description, creation_date, update_date, authors,
-                category, collaborator, files, keywords, license, platform, state);
-    }
-
-    @Override
-    public void deleteOer(int id){ personalOerManagementOutputPort.deleteOer(id); }
-
 }
